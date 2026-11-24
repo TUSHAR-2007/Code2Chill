@@ -1,0 +1,44 @@
+@import "./tokens.css";
+@import "tailwindcss";
+
+/* Custom base styles */
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    @apply bg-[#090B0D] text-[#F1F3E9] antialiased;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    line-height: 1.5;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-[#FF6B35] text-[#090B0D];
+  }
+
+  /* Scrollbar styling (WebKit) */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-[#111619];
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #FF6B35;
+    border-radius: 0.25rem;
+  }
+
+  /* Focus outline */
+  :focus-visible {
+    outline: 2px solid #45D9E8;
+    outline-offset: 2px;
+  }
+}

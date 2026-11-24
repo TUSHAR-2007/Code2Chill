@@ -1,0 +1,35 @@
+/* tokens.css – design tokens (colors, spacing, radius, shadows) */
+/* Tailwind already provides utilities; this file can be used for custom CSS variables if needed */
+
+:root {
+  /* Color tokens */
+  --color-bg: #090B0D;
+  --color-surface: #111619;
+  --color-raised: #1A2224;
+  --color-text: #F1F3E9;
+  --color-muted: #A5B0AA;
+  --color-amber: #FF6B35;
+  --color-acid: #B8F34A;
+  --color-cyan: #45D9E8;
+  --color-line: #344044;
+
+  /* Spacing */
+  --spacing-1: 0.25rem;   /* 4px */
+  --spacing-2: 0.5rem;    /* 8px */
+  --spacing-3: 0.75rem;   /* 12px */
+  --spacing-4: 1rem;      /* 16px */
+  --spacing-5: 1.25rem;   /* 20px */
+  --spacing-6: 1.5rem;    /* 24px */
+  --spacing-8: 2rem;      /* 32px */
+  --spacing-10: 2.5rem;   /* 40px */
+
+  /* Border radius */
+  --radius-sm: 0.125rem;   /* 2px */
+  --radius-md: 0.25rem;    /* 4px */
+  --radius-lg: 0.5rem;     /* 8px */
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.15);
+}
