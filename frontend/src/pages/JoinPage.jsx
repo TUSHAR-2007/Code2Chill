@@ -3,59 +3,56 @@ import { Link } from 'react-router-dom';
 import Container from '../components/layout/Container.jsx';
 import SectionHeading from '../components/ui/SectionHeading.jsx';
 
-// Community values and exploratory pillars
+// Community values and general aspirations
 const COMMUNITY_VALUES = [
   {
-    code: '01 // EXPERIMENTATION',
-    title: 'Practical Exploration & Builds',
+    code: '01 // EXPLORATION',
+    title: 'Practical Learning & Builds',
     accent: '#FF6B35',
     borderColor: 'border-[#FF6B35]',
     badgeBg: 'bg-[#FF6B35]/10 text-[#FF6B35] border-[#FF6B35]/30',
     description:
-      'Tackle practical software engineering, computer vision experiments, creative web apps, and hardware prototypes through self-directed curiosity.',
+      'Engage with software development, creative coding, and hands-on technology projects driven by genuine student curiosity.',
   },
   {
-    code: '02 // PEER_NETWORK',
-    title: 'Peer Learning & Collaboration',
+    code: '02 // COMMUNITY',
+    title: 'Peer Collaboration',
     accent: '#45D9E8',
     borderColor: 'border-[#45D9E8]',
     badgeBg: 'bg-[#45D9E8]/10 text-[#45D9E8] border-[#45D9E8]/30',
     description:
-      'Connect with fellow students across years and disciplines to exchange insights, review architectures, and solve challenging engineering problems together.',
+      'Connect with fellow students interested in technology to share ideas, learn collaboratively, and build technical skills together.',
   },
   {
-    code: '03 // CAMPUS_INITIATIVES',
-    title: 'Community Events & Sprints',
+    code: '03 // CAMPUS_EVENTS',
+    title: 'Events & Gatherings',
     accent: '#B8F34A',
     borderColor: 'border-[#B8F34A]',
     badgeBg: 'bg-[#B8F34A]/10 text-[#B8F34A] border-[#B8F34A]/30',
     description:
-      'Participate in student-led hackathons, coding workshops, technical documentation sprints, and community showcases organized with OSL.',
+      'Attend community sessions, technical gatherings, and student initiatives organized in coordination with the Office of Student Life.',
   },
 ];
 
-// Verified guidance for enrollment
-const ENROLLMENT_STEPS = [
+// Verified guidance for staying informed
+const ENROLLMENT_GUIDELINES = [
   {
-    step: '01',
-    code: 'DISCOVER // CHANNELS',
-    title: 'Follow Official Announcements',
+    code: '01 // OFFICIAL_NOTICES',
+    title: 'Official Announcements',
     description:
-      'Recruitment notices, informational briefings, and orientation dates are published through official Code2Chill social channels and OSL bulletin boards.',
+      'Follow the official Code2Chill and Office of Student Life announcements for recruitment information and enrollment instructions.',
   },
   {
-    step: '02',
-    code: 'ALIGN // OSL_CYCLES',
-    title: 'Watch for Enrollment Windows',
+    code: '02 // OPEN_ACTIVITIES',
+    title: 'Open Campus Sessions',
     description:
-      'Membership enrollment is coordinated in accordance with official Chitkara University student organization recruitment schedules at the start of academic terms.',
+      'Students can engage with open community sessions, project showcases, and events hosted by the club across the academic year.',
   },
   {
-    step: '03',
-    code: 'APPLY // OFFICIAL_PORTAL',
-    title: 'Register Through Official Forms',
+    code: '03 // VERIFIED_CHANNELS',
+    title: 'Stay Connected',
     description:
-      'When an enrollment window opens, follow the verified registration links and instructions distributed in official university communications.',
+      'Monitor our verified social channels on Instagram and LinkedIn, where official announcements regarding club activities are shared.',
   },
 ];
 
@@ -72,7 +69,7 @@ export default function JoinPage() {
                 <span className="h-2 w-2 rounded-full bg-[#B8F34A] animate-pulse"></span>
                 <span>telemetry:~/c2c/join_protocol</span>
                 <span className="text-[#344044]">|</span>
-                <span className="text-[#45D9E8]">STATUS: REGISTRATION_INFO</span>
+                <span className="text-[#45D9E8]">STATUS: ENROLLMENT_INFO</span>
               </div>
               <div className="font-mono text-xs text-[#FF6B35] border border-[#FF6B35]/40 px-2.5 py-1 rounded bg-[#FF6B35]/10 tracking-wider">
                 C2C // JOIN_PROTOCOL
@@ -88,7 +85,7 @@ export default function JoinPage() {
                   Code2Chill is an open, student-led technical collective at Chitkara University operating under the Office of Student Life (OSL). We bring curious minds together to learn by doing, build software, and explore technology collaboratively.
                 </p>
                 <p className="text-sm text-[#A5B0AA] max-w-2xl leading-relaxed">
-                  Whether you are writing your first lines of code, exploring machine learning models, or organizing large campus events, Code2Chill is where serious technical craft meets a supportive peer community.
+                  Whether you are beginning your coding journey or exploring new technical ideas, Code2Chill brings students together around a shared curiosity for technology.
                 </p>
                 <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-mono text-[#A5B0AA]">
                   <span className="flex items-center gap-1.5">
@@ -100,12 +97,12 @@ export default function JoinPage() {
                 </div>
               </div>
 
-              {/* Custom Technical Schematic SVG */}
+              {/* Decorative Technical Pathway SVG */}
               <div className="lg:col-span-4 flex justify-center">
                 <div className="w-full max-w-xs rounded border border-[#344044] bg-[#1A2224]/80 p-5 font-mono text-xs space-y-3">
                   <div className="flex justify-between items-center text-[11px] text-[#A5B0AA] border-b border-[#344044] pb-2">
-                    <span className="text-[#F1F3E9]">ONBOARDING_PROTOCOL</span>
-                    <span className="text-[#45D9E8]">STANDBY</span>
+                    <span className="text-[#F1F3E9]">COMMUNITY_PATHWAY</span>
+                    <span className="text-[#B8F34A]">ACTIVE</span>
                   </div>
 
                   <svg
@@ -113,7 +110,7 @@ export default function JoinPage() {
                     viewBox="0 0 220 130"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    aria-label="Code2Chill onboarding protocol schematic diagram"
+                    aria-label="Code2Chill community pathway diagram"
                     role="img"
                   >
                     {/* Background grid */}
@@ -121,7 +118,7 @@ export default function JoinPage() {
                     <line x1="15" y1="65" x2="205" y2="65" stroke="#344044" strokeWidth="0.5" strokeDasharray="2 2" />
                     <line x1="15" y1="110" x2="205" y2="110" stroke="#344044" strokeWidth="0.5" strokeDasharray="2 2" />
 
-                    {/* Protocol Pathway */}
+                    {/* Community Pathway traces */}
                     <path d="M30 65 L80 65 L110 35 L160 35" stroke="#45D9E8" strokeWidth="1.5" />
                     <path d="M110 35 L140 95 L190 95" stroke="#FF6B35" strokeWidth="1.2" strokeDasharray="3 3" />
 
@@ -144,8 +141,8 @@ export default function JoinPage() {
                   </svg>
 
                   <div className="pt-2 border-t border-[#344044] flex justify-between text-[11px] text-[#A5B0AA]">
-                    <span>MODE: ENROLLMENT_SYNC</span>
-                    <span className="text-[#B8F34A]">READY</span>
+                    <span>FOCUS: PEER_LEARNING</span>
+                    <span className="text-[#45D9E8]">EXPLORE</span>
                   </div>
                 </div>
               </div>
@@ -173,7 +170,7 @@ export default function JoinPage() {
             </div>
 
             <p className="text-sm text-[#A5B0AA] max-w-2xl leading-relaxed">
-              We offer an open, student-led environment focused on experimentation, peer knowledge-sharing, and practical technical craft.
+              We offer an open, student-led environment focused on exploration, peer knowledge-sharing, and practical technical craft.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
@@ -216,46 +213,46 @@ export default function JoinPage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-[#344044] pb-4">
               <div>
                 <span className="font-mono text-xs text-[#45D9E8] uppercase tracking-wider block">
-                  // ENROLLMENT_GUIDELINES
+                  // ENROLLMENT_GUIDANCE
                 </span>
                 <SectionHeading className="!mb-0">
                   How to Get Involved
                 </SectionHeading>
               </div>
               <span className="font-mono text-xs text-[#A5B0AA]">
-                OFFICIAL UNIVERSITY PATHWAY
+                OFFICIAL ANNOUNCEMENTS
               </span>
             </div>
 
             <p className="text-sm text-[#A5B0AA] max-w-2xl leading-relaxed">
-              Recruitment and member onboarding take place in alignment with official Chitkara University registration periods through the Office of Student Life.
+              Recruitment procedures and joining details are announced directly by Code2Chill and the Office of Student Life (OSL).
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
-              {ENROLLMENT_STEPS.map((step) => (
+              {ENROLLMENT_GUIDELINES.map((guide) => (
                 <div
-                  key={step.step}
+                  key={guide.code}
                   className="rounded-lg border border-[#344044] bg-[#111619] p-6 space-y-4 relative overflow-hidden"
                 >
                   <div className="flex items-center justify-between border-b border-[#344044] pb-3">
                     <span className="font-mono text-xs text-[#FF6B35]">
-                      {step.code}
+                      {guide.code}
                     </span>
-                    <span className="font-mono text-sm font-bold text-[#F1F3E9]/40">
-                      STEP {step.step}
+                    <span className="font-mono text-xs text-[#B8F34A]">
+                      INFO
                     </span>
                   </div>
 
                   <h3 className="text-lg sm:text-xl font-bold font-['Barlow Condensed'] text-[#F1F3E9] uppercase tracking-wide">
-                    {step.title}
+                    {guide.title}
                   </h3>
 
                   <p className="text-xs sm:text-sm text-[#A5B0AA] leading-relaxed">
-                    {step.description}
+                    {guide.description}
                   </p>
 
                   <div className="pt-2 border-t border-[#344044]/60 text-[11px] font-mono text-[#A5B0AA]/80">
-                    OFFICIAL ENROLLMENT PROCEDURE
+                    OFFICIAL ANNOUNCEMENT PROCEDURE
                   </div>
                 </div>
               ))}
@@ -271,24 +268,24 @@ export default function JoinPage() {
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#344044] pb-4">
               <div className="space-y-1">
                 <span className="font-mono text-xs text-[#45D9E8] uppercase tracking-wider block">
-                  // CURRENT_STATUS
+                  // RECRUITMENT_NOTICE
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold font-['Barlow Condensed'] text-[#F1F3E9] uppercase tracking-wide">
                   Official Recruitment Notice
                 </h2>
               </div>
-              <div className="font-mono text-xs text-[#B8F34A] border border-[#B8F34A]/40 px-2.5 py-1 rounded bg-[#B8F34A]/10">
-                STATUS: ANNOUNCEMENT_PENDING
+              <div className="font-mono text-xs text-[#45D9E8] border border-[#45D9E8]/40 px-2.5 py-1 rounded bg-[#45D9E8]/10">
+                INFO: ANNOUNCEMENTS_ONLY
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
               <div className="md:col-span-8 space-y-4">
                 <p className="text-sm sm:text-base text-[#F1F3E9]/90 leading-relaxed">
-                  Recruitment information and application instructions are shared exclusively through official Code2Chill announcements and Office of Student Life (OSL) university notices.
+                  Recruitment information and enrollment instructions will be shared through official Code2Chill and Office of Student Life announcements.
                 </p>
                 <p className="text-xs sm:text-sm text-[#A5B0AA] leading-relaxed">
-                  To ensure a fair and verified process, student club enrollments at Chitkara University occur during designated university cycles. There is no active self-hosted application form on this website. Please monitor our official social channels and university bulletin boards for verified opening dates.
+                  There is no active application form hosted on this website. When enrollment opens, official instructions and application links are distributed directly via official channels. Please follow our official social channels to stay informed.
                 </p>
               </div>
 
@@ -300,8 +297,8 @@ export default function JoinPage() {
                 <div className="space-y-2 text-[#A5B0AA]">
                   <div>INSTITUTION: <span className="text-[#F1F3E9]">Chitkara University</span></div>
                   <div>OFFICE: <span className="text-[#F1F3E9]">Student Life (OSL)</span></div>
-                  <div>PORTAL: <span className="text-[#FF6B35]">Official OSL Channels</span></div>
-                  <div>CYCLE: <span className="text-[#B8F34A]">Scheduled Academic Term</span></div>
+                  <div>INFORMATION: <span className="text-[#FF6B35]">Official Announcements</span></div>
+                  <div>APPLICATIONS: <span className="text-[#B8F34A]">Via Official Channels</span></div>
                 </div>
               </div>
             </div>
@@ -322,7 +319,7 @@ export default function JoinPage() {
                 Stay Connected & Explore Our Work
               </h2>
               <p className="text-sm sm:text-base text-[#A5B0AA] leading-relaxed">
-                While waiting for the next official recruitment cycle, discover what our members have built, explore upcoming and past events, and follow our official channels for real-time announcements.
+                While waiting for recruitment announcements, discover what our members have built, explore past events, and follow our official channels for real-time updates.
               </p>
             </div>
 
