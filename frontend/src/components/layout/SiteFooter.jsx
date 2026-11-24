@@ -105,9 +105,9 @@ export default function SiteFooter() {
               <li>
                 <Link
                   to="/status"
-                  className="hover:text-[#B8F34A] transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-[#45D9E8] rounded flex items-center gap-1.5"
+                  className="hover:text-[#45D9E8] transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-[#45D9E8] rounded flex items-center gap-1.5"
                 >
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#B8F34A]"></span>
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#45D9E8]"></span>
                   Backend Health / Status
                 </Link>
               </li>

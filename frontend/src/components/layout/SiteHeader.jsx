@@ -70,10 +70,10 @@ export default function SiteHeader() {
             <Link
               to="/status"
               className="ml-3 flex items-center gap-1.5 px-2.5 py-1 text-xs font-mono rounded border border-[#344044] bg-[#111619] text-[#A5B0AA] hover:text-[#45D9E8] hover:border-[#45D9E8]/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#45D9E8]"
-              title="System Status"
+              title="System Status & Telemetry"
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-[#B8F34A] animate-pulse"></span>
-              SYS:OK
+              <span className="h-1.5 w-1.5 rounded-full bg-[#45D9E8] animate-pulse"></span>
+              SYS:STATUS
             </Link>
           </nav>
 
@@ -124,8 +124,8 @@ export default function SiteHeader() {
                 to="/status"
                 className="flex items-center gap-1.5 py-1 px-2 rounded hover:text-[#45D9E8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#45D9E8]"
               >
-                <span className="h-2 w-2 rounded-full bg-[#B8F34A]"></span>
-                Status: Operational
+                <span className="h-2 w-2 rounded-full bg-[#45D9E8]"></span>
+                Status & Telemetry
               </Link>
               <span className="text-[#A5B0AA]/60">v0.1.0</span>
             </div>
