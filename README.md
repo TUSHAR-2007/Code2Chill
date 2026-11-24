@@ -109,6 +109,18 @@ E:\club project/
 - Python 3.13+ or 3.14+
 - PostgreSQL 16+ or 17 (optional for local SQLite testing)
 
+### Environment Configuration
+- **Backend Environment:** Copy `.env.example` to `.env` in the repository root:
+  ```bash
+  DATABASE_URL=postgresql+psycopg://username:password@localhost:5432/code2chill
+  ```
+  *(Defaults to `postgresql+psycopg://user:password@localhost:5432/dbname` if unset).*
+- **Frontend Environment:** Copy `frontend/.env.example` to `frontend/.env`:
+  ```bash
+  VITE_API_BASE_URL=http://127.0.0.1:8000/api
+  ```
+  *(Defaults to `http://127.0.0.1:8000/api` if unset).*
+
 ### Frontend Development
 ```bash
 # Navigate to frontend directory
@@ -162,11 +174,17 @@ npm --prefix frontend run build
 - **Executive Leadership:**
   - Lakshay Kalra — President / Club Leader
   - Jiya Arora — Vice-President
-- **Domain Division Leads:**
-  - Samanyu Thakur & Bhupinder Singh — Technical Heads
-  - Tamanna Kakkar & Ayush Sharma — Content Heads
-  - Jashan Bhalla & Muskan Dhanda — Media Heads
-  - Divyana Garg & Hunar Mehndiratta — Public Relations Heads
+- **Verified Divisions & Domain Roster:**
+  - **Technical:** Samanyu Thakur & Bhupinder Singh — Technical Heads
+  - **Content:** Tamanna Kakkar & Ayush Sharma — Content Heads
+  - **Media & Outreach:** Jashan Bhalla (Social Media Head) & Muskan Dhanda (Promotion Head)
+  - **Core:** Divyana Garg & Hunar Mehndiratta — Core Members
+- **Verified Historical Events:**
+  - **DOMination** (`ARCHIVE // EVT_001`) — Web engineering and DOM manipulation workshop
+  - **Byte The Vibe** (`ARCHIVE // EVT_002`) — Algorithmic exploration and peer coding session
+- **Verified Student Projects:**
+  - **NEXUS — Emotion Detection** — Student-built vision and machine learning exploration
+  - **ChronoAtlas** — Spatial and historical data visualization platform
 
 ---
 
