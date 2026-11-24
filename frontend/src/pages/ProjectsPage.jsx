@@ -149,8 +149,8 @@ export default function ProjectsPage() {
 
               <div className="pt-4 border-t border-[#344044] space-y-2 text-xs font-mono text-[#A5B0AA]">
                 <div className="flex justify-between items-center">
-                  <span>CATEGORY: <span className="text-[#F1F3E9]">AI & VISION</span></span>
-                  <span className="text-[#45D9E8]">CONFIRMED_TITLE</span>
+                  <span>RECORD: <span className="text-[#F1F3E9]">VERIFIED_PROJECT</span></span>
+                  <span className="text-[#45D9E8]">STUDENT_WORK</span>
                 </div>
                 <div className="text-[11px] text-[#A5B0AA]/70">
                   AFFILIATION: Chitkara University (OSL)
@@ -188,8 +188,8 @@ export default function ProjectsPage() {
 
               <div className="pt-4 border-t border-[#344044] space-y-2 text-xs font-mono text-[#A5B0AA]">
                 <div className="flex justify-between items-center">
-                  <span>CATEGORY: <span className="text-[#F1F3E9]">MAPPING & SPATIAL</span></span>
-                  <span className="text-[#FF6B35]">CONFIRMED_TITLE</span>
+                  <span>RECORD: <span className="text-[#F1F3E9]">VERIFIED_PROJECT</span></span>
+                  <span className="text-[#FF6B35]">STUDENT_WORK</span>
                 </div>
                 <div className="text-[11px] text-[#A5B0AA]/70">
                   AFFILIATION: Chitkara University (OSL)
@@ -200,71 +200,71 @@ export default function ProjectsPage() {
         </Container>
       </section>
 
-      {/* SECTION 3: PROJECT DEVELOPMENT PHILOSOPHY */}
+      {/* SECTION 3: PROJECT VALUES & ASPIRATIONS */}
       <section>
         <Container>
           <div className="space-y-4 mb-8">
             <div className="font-mono text-xs text-[#B8F34A] uppercase tracking-wider">
-              // DEVELOPMENT_METHODOLOGY
+              // GUIDING_VALUES
             </div>
-            <SectionHeading>Our Engineering Ethos</SectionHeading>
+            <SectionHeading>What We Value in Building</SectionHeading>
             <p className="text-sm text-[#A5B0AA] max-w-xl">
-              How our student community approaches technical building, problem solving, and peer review.
+              The shared principles and creative aspirations that guide how we approach technology and projects as students.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Principle 1 */}
+            {/* Value 1 */}
             <div className="rounded-lg border border-[#344044] bg-[#111619] p-6 space-y-4 hover:border-[#FF6B35] transition-colors group">
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs text-[#FF6B35] bg-[#FF6B35]/10 px-2 py-0.5 rounded border border-[#FF6B35]/30">
-                  ETHOS // 01
+                  VALUE // 01
                 </span>
                 <svg className="w-5 h-5 text-[#FF6B35]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold font-['Barlow Condensed'] text-[#F1F3E9] uppercase tracking-wide group-hover:text-[#FF6B35] transition-colors">
-                Practical Experimentation
+                Learning by Doing
               </h3>
               <p className="text-sm text-[#A5B0AA] leading-relaxed">
-                We believe the best way to understand systems is to build them from the ground up. Prototyping early, testing assumptions, and learning directly through debugging are core to our development culture.
+                We value hands-on exploration and practical curiosity. We believe building working software and working through bugs directly is one of the most engaging ways to develop real engineering understanding.
               </p>
             </div>
 
-            {/* Principle 2 */}
+            {/* Value 2 */}
             <div className="rounded-lg border border-[#344044] bg-[#111619] p-6 space-y-4 hover:border-[#45D9E8] transition-colors group">
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs text-[#45D9E8] bg-[#45D9E8]/10 px-2 py-0.5 rounded border border-[#45D9E8]/30">
-                  ETHOS // 02
+                  VALUE // 02
                 </span>
                 <svg className="w-5 h-5 text-[#45D9E8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold font-['Barlow Condensed'] text-[#F1F3E9] uppercase tracking-wide group-hover:text-[#45D9E8] transition-colors">
-                Peer Collaboration
+                Open Collaboration
               </h3>
               <p className="text-sm text-[#A5B0AA] leading-relaxed">
-                No developer builds in a silo. Members share design challenges openly, conduct informal architectural reviews, and help each other overcome technical hurdles across software and hardware stacks.
+                We aspire to create an open and supportive environment where students can share ideas, ask questions freely, and learn alongside peers without gatekeeping or competition.
               </p>
             </div>
 
-            {/* Principle 3 */}
+            {/* Value 3 */}
             <div className="rounded-lg border border-[#344044] bg-[#111619] p-6 space-y-4 hover:border-[#B8F34A] transition-colors group">
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs text-[#B8F34A] bg-[#B8F34A]/10 px-2 py-0.5 rounded border border-[#B8F34A]/30">
-                  ETHOS // 03
+                  VALUE // 03
                 </span>
                 <svg className="w-5 h-5 text-[#B8F34A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold font-['Barlow Condensed'] text-[#F1F3E9] uppercase tracking-wide group-hover:text-[#B8F34A] transition-colors">
-                Disciplined Architecture
+                Thoughtful Craft
               </h3>
               <p className="text-sm text-[#A5B0AA] leading-relaxed">
-                We value clean code, structured design patterns, and understanding underlying technologies over superficial copy-pasting. Projects are built with maintainability and genuine understanding in mind.
+                We value writing clear, readable code and striving to understand how systems work under the hood, prioritizing steady personal growth and genuine learning over quick shortcuts.
               </p>
             </div>
           </div>
