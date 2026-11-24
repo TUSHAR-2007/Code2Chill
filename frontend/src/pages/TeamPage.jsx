@@ -10,7 +10,7 @@ const EXECUTIVE_LEADERSHIP = [
     name: 'Lakshay Kalra',
     role: 'Club Leader / President',
     initials: 'LK',
-    division: 'EXECUTIVE LEADERSHIP',
+    division: 'Executive',
     code: 'EXEC_01',
     accent: '#FF6B35',
   },
@@ -19,7 +19,7 @@ const EXECUTIVE_LEADERSHIP = [
     name: 'Jiya Arora',
     role: 'Vice-President',
     initials: 'JA',
-    division: 'EXECUTIVE LEADERSHIP',
+    division: 'Executive',
     code: 'EXEC_02',
     accent: '#FF6B35',
   },
@@ -29,12 +29,12 @@ const EXECUTIVE_LEADERSHIP = [
 const TEAM_DIVISIONS = [
   {
     id: 'div-tech',
-    title: 'Technical Division',
-    code: '01 // TECH_LEADS',
+    title: 'Technical',
+    code: '01 // TECHNICAL',
     accent: '#45D9E8',
     borderColor: 'border-[#45D9E8]',
     badgeBg: 'bg-[#45D9E8]/10 text-[#45D9E8] border-[#45D9E8]/30',
-    description: 'Architecture guidance, technical workshop delivery, and open-source project leadership.',
+    description: 'Software development, technical workshop curricula, code repositories, and engineering mentorship.',
     members: [
       {
         name: 'Samanyu Thakur',
@@ -52,12 +52,12 @@ const TEAM_DIVISIONS = [
   },
   {
     id: 'div-content',
-    title: 'Content Division',
-    code: '02 // CONTENT_LEADS',
+    title: 'Content',
+    code: '02 // CONTENT',
     accent: '#B8F34A',
     borderColor: 'border-[#B8F34A]',
     badgeBg: 'bg-[#B8F34A]/10 text-[#B8F34A] border-[#B8F34A]/30',
-    description: 'Editorial direction, documentation frameworks, event copy, and technical publishing.',
+    description: 'Editorial guidelines, technical documentation, event communications, and publication frameworks.',
     members: [
       {
         name: 'Tamanna Kakkar',
@@ -75,12 +75,12 @@ const TEAM_DIVISIONS = [
   },
   {
     id: 'div-media',
-    title: 'Media & Outreach Division',
+    title: 'Media & Outreach',
     code: '03 // MEDIA_OUTREACH',
     accent: '#FF6B35',
     borderColor: 'border-[#FF6B35]',
     badgeBg: 'bg-[#FF6B35]/10 text-[#FF6B35] border-[#FF6B35]/30',
-    description: 'Visual communications, social media strategy, public engagement, and campus campaigns.',
+    description: 'Social media management, visual identity assets, campus promotion campaigns, and community engagement.',
     members: [
       {
         name: 'Jashan Bhalla',
@@ -98,12 +98,12 @@ const TEAM_DIVISIONS = [
   },
   {
     id: 'div-core',
-    title: 'Core Operations',
-    code: '04 // CORE_TEAM',
+    title: 'Core',
+    code: '04 // CORE',
     accent: '#45D9E8',
     borderColor: 'border-[#45D9E8]',
     badgeBg: 'bg-[#45D9E8]/10 text-[#45D9E8] border-[#45D9E8]/30',
-    description: 'Operational coordination, logistics management, event execution, and community support.',
+    description: 'Operational logistics, event coordination, member support, and cross-functional execution.',
     members: [
       {
         name: 'Divyana Garg',
@@ -134,7 +134,7 @@ export default function TeamPage() {
                 <span className="h-2 w-2 rounded-full bg-[#B8F34A] animate-pulse"></span>
                 <span>telemetry:~/c2c/team_directory</span>
                 <span className="text-[#344044]">|</span>
-                <span className="text-[#45D9E8]">ROSTER: VERIFIED</span>
+                <span className="text-[#45D9E8]">ROSTER: PUBLISHED</span>
               </div>
               <div className="font-mono text-xs text-[#FF6B35] border border-[#FF6B35]/40 px-2.5 py-1 rounded bg-[#FF6B35]/10 tracking-wider">
                 C2C // TEAM_DIRECTORY
@@ -150,7 +150,7 @@ export default function TeamPage() {
                   Code2Chill is guided by student leaders, engineers, creators, and organizers at Chitkara University, operating under the mentorship of the Office of Student Life (OSL).
                 </p>
                 <p className="text-sm text-[#A5B0AA] max-w-2xl leading-relaxed">
-                  Our team coordinates hands-on hackathons, technical workshops, open-source projects, and peer learning sessions. Explore our official leadership and domain divisions below.
+                  Our team coordinates hands-on hackathons, technical workshops, open-source projects, and peer learning sessions across five functional divisions.
                 </p>
                 <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-mono text-[#A5B0AA]">
                   <span className="flex items-center gap-1.5">
@@ -158,15 +158,15 @@ export default function TeamPage() {
                     CAMPUS: CHITKARA UNIVERSITY
                   </span>
                   <span className="text-[#344044] hidden sm:inline">|</span>
-                  <span className="text-[#B8F34A]">STATUS: OFFICIAL ROSTER</span>
+                  <span className="text-[#B8F34A]">STATUS: PUBLISHED ROSTER</span>
                 </div>
               </div>
 
-              {/* Custom Retro-Tech Network Cluster SVG */}
+              {/* Decorative Collaborative Peer Network SVG (Non-hierarchical mesh) */}
               <div className="lg:col-span-4 flex justify-center">
                 <div className="w-full max-w-xs rounded border border-[#344044] bg-[#1A2224]/80 p-5 font-mono text-xs space-y-3">
                   <div className="flex justify-between items-center text-[11px] text-[#A5B0AA] border-b border-[#344044] pb-2">
-                    <span className="text-[#F1F3E9]">ROSTER_TOPOLOGY_MATRIX</span>
+                    <span className="text-[#F1F3E9]">COLLABORATIVE_MESH</span>
                     <span className="text-[#B8F34A]">ACTIVE</span>
                   </div>
 
@@ -175,47 +175,72 @@ export default function TeamPage() {
                     viewBox="0 0 220 130"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    aria-label="Team network topology diagram"
+                    aria-label="Code2Chill collaborative peer network diagram"
                     role="img"
                   >
-                    {/* Background gridlines */}
-                    <line x1="20" y1="20" x2="200" y2="20" stroke="#344044" strokeWidth="0.5" strokeDasharray="2 2" />
-                    <line x1="20" y1="65" x2="200" y2="65" stroke="#344044" strokeWidth="0.5" strokeDasharray="2 2" />
-                    <line x1="20" y1="110" x2="200" y2="110" stroke="#344044" strokeWidth="0.5" strokeDasharray="2 2" />
+                    {/* Background grid */}
+                    <line x1="15" y1="25" x2="205" y2="25" stroke="#344044" strokeWidth="0.5" strokeDasharray="2 2" />
+                    <line x1="15" y1="65" x2="205" y2="65" stroke="#344044" strokeWidth="0.5" strokeDasharray="2 2" />
+                    <line x1="15" y1="105" x2="205" y2="105" stroke="#344044" strokeWidth="0.5" strokeDasharray="2 2" />
 
-                    {/* Interconnecting traces */}
-                    <path d="M110 30 L45 75" stroke="#FF6B35" strokeWidth="1" strokeDasharray="3 3" />
-                    <path d="M110 30 L85 100" stroke="#45D9E8" strokeWidth="1" />
-                    <path d="M110 30 L135 100" stroke="#B8F34A" strokeWidth="1" />
-                    <path d="M110 30 L175 75" stroke="#FF6B35" strokeWidth="1" strokeDasharray="3 3" />
-                    <line x1="45" y1="75" x2="85" y2="100" stroke="#344044" strokeWidth="1" />
-                    <line x1="175" y1="75" x2="135" y2="100" stroke="#344044" strokeWidth="1" />
+                    {/* Peer-to-peer ring traces (Non-hierarchical collaborative mesh) */}
+                    <polygon
+                      points="110,24 175,48 152,106 68,106 45,48"
+                      stroke="#344044"
+                      strokeWidth="1.2"
+                      fill="none"
+                    />
 
-                    {/* Central Executive Node */}
-                    <circle cx="110" cy="30" r="14" fill="#111619" stroke="#FF6B35" strokeWidth="2" />
-                    <text x="110" y="33" fill="#FF6B35" fontSize="8" fontFamily="monospace" textAnchor="middle" fontWeight="bold">EXEC</text>
+                    {/* Star mesh connections between divisions */}
+                    <line x1="110" y1="24" x2="152" y2="106" stroke="#FF6B35" strokeWidth="0.7" strokeDasharray="3 3" />
+                    <line x1="110" y1="24" x2="68" y2="106" stroke="#45D9E8" strokeWidth="0.7" strokeDasharray="3 3" />
+                    <line x1="45" y1="48" x2="175" y2="48" stroke="#344044" strokeWidth="0.7" />
 
-                    {/* Peripheral Domain Nodes */}
-                    {/* Technical Node */}
-                    <circle cx="45" cy="75" r="11" fill="#111619" stroke="#45D9E8" strokeWidth="1.5" />
-                    <text x="45" y="78" fill="#45D9E8" fontSize="7" fontFamily="monospace" textAnchor="middle">TECH</text>
+                    {/* Central Community Badge */}
+                    <circle cx="110" cy="65" r="14" fill="#111619" stroke="#344044" strokeWidth="1.5" />
+                    <text x="110" y="68" fill="#F1F3E9" fontSize="7" fontFamily="monospace" textAnchor="middle" fontWeight="bold">C2C</text>
 
-                    {/* Content Node */}
-                    <circle cx="85" cy="100" r="11" fill="#111619" stroke="#B8F34A" strokeWidth="1.5" />
-                    <text x="85" y="103" fill="#B8F34A" fontSize="7" fontFamily="monospace" textAnchor="middle">CONT</text>
+                    {/* 5 Division Nodes (Balanced circular arrangement) */}
+                    {/* Executive */}
+                    <circle cx="110" cy="24" r="10" fill="#111619" stroke="#FF6B35" strokeWidth="1.5" />
+                    <text x="110" y="27" fill="#FF6B35" fontSize="6.5" fontFamily="monospace" textAnchor="middle">EXEC</text>
 
-                    {/* Media Node */}
-                    <circle cx="135" cy="100" r="11" fill="#111619" stroke="#FF6B35" strokeWidth="1.5" />
-                    <text x="135" y="103" fill="#FF6B35" fontSize="7" fontFamily="monospace" textAnchor="middle">MED</text>
+                    {/* Media & Outreach */}
+                    <circle cx="175" cy="48" r="10" fill="#111619" stroke="#FF6B35" strokeWidth="1.5" />
+                    <text x="175" y="51" fill="#FF6B35" fontSize="6.5" fontFamily="monospace" textAnchor="middle">MED</text>
 
-                    {/* Core Node */}
-                    <circle cx="175" cy="75" r="11" fill="#111619" stroke="#45D9E8" strokeWidth="1.5" />
-                    <text x="175" y="78" fill="#45D9E8" fontSize="7" fontFamily="monospace" textAnchor="middle">CORE</text>
+                    {/* Core */}
+                    <circle cx="152" cy="106" r="10" fill="#111619" stroke="#45D9E8" strokeWidth="1.5" />
+                    <text x="152" y="109" fill="#45D9E8" fontSize="6.5" fontFamily="monospace" textAnchor="middle">CORE</text>
+
+                    {/* Content */}
+                    <circle cx="68" cy="106" r="10" fill="#111619" stroke="#B8F34A" strokeWidth="1.5" />
+                    <text x="68" y="109" fill="#B8F34A" fontSize="6.5" fontFamily="monospace" textAnchor="middle">CONT</text>
+
+                    {/* Technical */}
+                    <circle cx="45" cy="48" r="10" fill="#111619" stroke="#45D9E8" strokeWidth="1.5" />
+                    <text x="45" y="51" fill="#45D9E8" fontSize="6.5" fontFamily="monospace" textAnchor="middle">TECH</text>
+
+                    {/* 10 Member Satellite Markers (2 per division node) */}
+                    <circle cx="102" cy="12" r="2" fill="#FF6B35" />
+                    <circle cx="118" cy="12" r="2" fill="#FF6B35" />
+
+                    <circle cx="187" cy="43" r="2" fill="#FF6B35" />
+                    <circle cx="187" cy="53" r="2" fill="#FF6B35" />
+
+                    <circle cx="160" cy="116" r="2" fill="#45D9E8" />
+                    <circle cx="144" cy="116" r="2" fill="#45D9E8" />
+
+                    <circle cx="76" cy="116" r="2" fill="#B8F34A" />
+                    <circle cx="60" cy="116" r="2" fill="#B8F34A" />
+
+                    <circle cx="33" cy="43" r="2" fill="#45D9E8" />
+                    <circle cx="33" cy="53" r="2" fill="#45D9E8" />
                   </svg>
 
                   <div className="pt-2 border-t border-[#344044] flex justify-between text-[11px] text-[#A5B0AA]">
-                    <span>NODES: 10 RECORDED</span>
-                    <span className="text-[#45D9E8]">INTEGRITY: 100%</span>
+                    <span>MEMBERS: 10 LISTED</span>
+                    <span className="text-[#45D9E8]">DIVISIONS: 5</span>
                   </div>
                 </div>
               </div>
@@ -238,12 +263,12 @@ export default function TeamPage() {
                 </SectionHeading>
               </div>
               <span className="font-mono text-xs text-[#A5B0AA]">
-                STATUS: VERIFIED // CHITKARA UNIVERSITY (OSL)
+                AFFILIATION: CHITKARA UNIVERSITY (OSL)
               </span>
             </div>
 
             <p className="text-sm text-[#A5B0AA] max-w-2xl leading-relaxed">
-              Guiding club strategy, institutional alignment with the Office of Student Life, and overseeing community operations.
+              Guiding club vision, institutional coordination with the Office of Student Life, and community direction.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
@@ -261,7 +286,7 @@ export default function TeamPage() {
                     </span>
                     <span className="font-mono text-xs text-[#B8F34A] flex items-center gap-1.5">
                       <span className="h-1.5 w-1.5 rounded-full bg-[#B8F34A]"></span>
-                      VERIFIED_RECORD
+                      DOCUMENTED_RECORD
                     </span>
                   </div>
 
@@ -285,8 +310,8 @@ export default function TeamPage() {
                   </div>
 
                   <div className="pt-3 border-t border-[#344044] flex flex-wrap items-center justify-between text-xs font-mono text-[#A5B0AA]/80 gap-2">
-                    <span>ROLE: {leader.division}</span>
-                    <span className="text-[#45D9E8]">CAMPUS LEAD</span>
+                    <span>DIVISION: {leader.division.toUpperCase()}</span>
+                    <span className="text-[#45D9E8]">OFFICIAL ROLE</span>
                   </div>
                 </div>
               ))}
@@ -295,21 +320,21 @@ export default function TeamPage() {
         </Container>
       </section>
 
-      {/* SECTION 3: DOMAIN DIVISIONS & CORE TEAM */}
+      {/* SECTION 3: DOMAIN DIVISIONS */}
       <section>
         <Container>
           <div className="space-y-8">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-[#344044] pb-4">
               <div>
                 <span className="font-mono text-xs text-[#45D9E8] uppercase tracking-wider block">
-                  // FUNCTIONAL_DEPARTMENTS
+                  // FUNCTIONAL_DIVISIONS
                 </span>
                 <SectionHeading className="!mb-0">
-                  Domain Divisions & Core Team
+                  Domain Divisions
                 </SectionHeading>
               </div>
               <span className="font-mono text-xs text-[#A5B0AA]">
-                ROSTER: 8 VERIFIED LEADS & CORE MEMBERS
+                ROSTER: 8 DOCUMENTED LEADS & MEMBERS
               </span>
             </div>
 
@@ -345,7 +370,7 @@ export default function TeamPage() {
                       >
                         <div className="flex items-center justify-between text-xs font-mono text-[#A5B0AA]">
                           <span className="text-[#B8F34A]">{member.node}</span>
-                          <span>STATUS: VERIFIED</span>
+                          <span>STATUS: DOCUMENTED</span>
                         </div>
 
                         <div className="flex items-center gap-4">
@@ -371,8 +396,8 @@ export default function TeamPage() {
                         </div>
 
                         <div className="pt-2 border-t border-[#344044]/60 flex items-center justify-between text-[11px] font-mono text-[#A5B0AA]/80">
-                          <span>CHITKARA UNIVERSITY</span>
-                          <span className="text-[#F1F3E9]">OFFICIAL RECORD</span>
+                          <span>DIVISION: {division.title.toUpperCase()}</span>
+                          <span className="text-[#F1F3E9]">CHITKARA UNIVERSITY</span>
                         </div>
                       </div>
                     ))}
