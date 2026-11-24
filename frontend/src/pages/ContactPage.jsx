@@ -15,7 +15,7 @@ const OFFICIAL_CHANNELS = [
     borderColor: 'border-[#FF6B35]',
     badgeBg: 'bg-[#FF6B35]/10 text-[#FF6B35] border-[#FF6B35]/30',
     description:
-      'Primary digital broadcast for event announcements, community highlights, session recaps, and student initiatives.',
+      'Official Instagram profile for Code2Chill community updates, event media, and club announcements.',
     buttonText: 'Open Instagram ↗',
     indicator: 'VERIFIED_HANDLE',
   },
@@ -29,9 +29,9 @@ const OFFICIAL_CHANNELS = [
     borderColor: 'border-[#45D9E8]',
     badgeBg: 'bg-[#45D9E8]/10 text-[#45D9E8] border-[#45D9E8]/30',
     description:
-      'Professional networking channel for club milestones, technical showcases, and community partnerships.',
+      'Official LinkedIn page for Code2Chill updates, organizational presence, and community milestones.',
     buttonText: 'Open LinkedIn ↗',
-    indicator: 'VERIFIED_COMPANY_PAGE',
+    indicator: 'VERIFIED_PAGE',
   },
 ];
 
@@ -42,21 +42,21 @@ const GOVERNANCE_INFO = [
     title: 'Chitkara University',
     accent: '#FF6B35',
     description:
-      'Our campus environment where student developers, designers, and creators come together to learn and collaborate.',
+      'The university campus where Code2Chill student activities, technical events, and peer collaborations take place.',
   },
   {
-    code: '02 // MENTORSHIP',
+    code: '02 // AFFILIATION',
     title: 'Office of Student Life (OSL)',
     accent: '#45D9E8',
     description:
-      'The administrative body providing institutional mentorship, facility support, and governance for student technical clubs.',
+      'The university office under which Code2Chill operates as an officially recognized student technical community.',
   },
   {
     code: '03 // ANNOUNCEMENTS',
-    title: 'Official Communications',
+    title: 'Official Announcements',
     accent: '#B8F34A',
     description:
-      'All official notices regarding club activities, recruitment, and public events are published through verified channels.',
+      'Official updates, event notices, and community information are communicated directly through verified channels.',
   },
 ];
 
@@ -86,10 +86,10 @@ export default function ContactPage() {
                   Communication <span className="text-[#FF6B35]">& Channels</span>.
                 </h1>
                 <p className="text-base sm:text-lg text-[#F1F3E9]/90 max-w-2xl leading-relaxed">
-                  Code2Chill is an open, student-led technical community at Chitkara University under the Office of Student Life (OSL).
+                  Code2Chill is an open, student-led technical community at Chitkara University operating under the Office of Student Life (OSL).
                 </p>
                 <p className="text-sm text-[#A5B0AA] max-w-2xl leading-relaxed">
-                  To ensure authentic and direct communication, all club updates, event schedules, and announcements are published exclusively through our verified digital channels and official university notices.
+                  All club updates, event schedules, and announcements are communicated through our verified digital channels and official university notices.
                 </p>
                 <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-mono text-[#A5B0AA]">
                   <span className="flex items-center gap-1.5">
@@ -97,7 +97,7 @@ export default function ContactPage() {
                     CAMPUS: CHITKARA UNIVERSITY
                   </span>
                   <span className="text-[#344044] hidden sm:inline">|</span>
-                  <span className="text-[#B8F34A]">GOVERNANCE: OFFICE OF STUDENT LIFE (OSL)</span>
+                  <span className="text-[#B8F34A]">AFFILIATION: OFFICE OF STUDENT LIFE (OSL)</span>
                 </div>
               </div>
 
@@ -114,7 +114,7 @@ export default function ContactPage() {
                     viewBox="0 0 220 130"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    aria-label="Code2Chill communication signal routing diagram"
+                    aria-label="Code2Chill communication channels diagram"
                     role="img"
                   >
                     {/* Background grid */}
@@ -170,12 +170,12 @@ export default function ContactPage() {
                 </SectionHeading>
               </div>
               <span className="font-mono text-xs text-[#A5B0AA]">
-                STATUS: OFFICIAL & MONITORED
+                STATUS: OFFICIAL_CHANNELS
               </span>
             </div>
 
             <p className="text-sm text-[#A5B0AA] max-w-2xl leading-relaxed">
-              Connect with Code2Chill through our verified official channels for community updates, event coverage, and announcements.
+              Connect with Code2Chill through our verified official channels for community updates, events, and announcements.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
@@ -235,7 +235,7 @@ export default function ContactPage() {
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-[#344044] pb-4">
               <div>
                 <span className="font-mono text-xs text-[#45D9E8] uppercase tracking-wider block">
-                  // GOVERNANCE & MENTORSHIP
+                  // GOVERNANCE & AFFILIATION
                 </span>
                 <SectionHeading className="!mb-0">
                   Institutional Affiliation
@@ -247,7 +247,7 @@ export default function ContactPage() {
             </div>
 
             <p className="text-sm text-[#A5B0AA] max-w-2xl leading-relaxed">
-              Code2Chill functions as a recognized student technical community operating under the governance and support of the university.
+              Code2Chill functions as a recognized student technical community operating under the Office of Student Life at Chitkara University.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
@@ -293,7 +293,7 @@ export default function ContactPage() {
                   // COMMUNICATION_POLICY
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-bold font-['Barlow Condensed'] text-[#F1F3E9] uppercase tracking-wide">
-                  Direct Inquiries & Transparency
+                  Communication & Inquiries
                 </h2>
               </div>
               <div className="font-mono text-xs text-[#B8F34A] border border-[#B8F34A]/40 px-2.5 py-1 rounded bg-[#B8F34A]/10">
@@ -304,10 +304,10 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
               <div className="md:col-span-8 space-y-4">
                 <p className="text-sm sm:text-base text-[#F1F3E9]/90 leading-relaxed">
-                  To ensure transparency and protect visitors from unverified contacts, Code2Chill does not host an unmonitored web contact form or publish unverified phone numbers or private email addresses.
+                  Code2Chill does not host a web contact-submission form or publish unverified phone numbers or private email addresses on this website.
                 </p>
                 <p className="text-xs sm:text-sm text-[#A5B0AA] leading-relaxed">
-                  For official inquiries, collaborations, or announcements, please connect directly through our verified LinkedIn company page or Instagram profile, or consult the Office of Student Life (OSL) on the Chitkara University campus.
+                  Visitors and students should follow official Code2Chill announcements and Office of Student Life (OSL) notices for community updates, events, and communication information.
                 </p>
               </div>
 
@@ -318,7 +318,7 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-2 text-[#A5B0AA]">
                   <div>INSTITUTION: <span className="text-[#F1F3E9]">Chitkara University</span></div>
-                  <div>GOVERNANCE: <span className="text-[#F1F3E9]">Office of Student Life</span></div>
+                  <div>AFFILIATION: <span className="text-[#F1F3E9]">Office of Student Life (OSL)</span></div>
                   <div>CHANNELS: <span className="text-[#FF6B35]">Instagram & LinkedIn</span></div>
                   <div>WEB FORM: <span className="text-[#B8F34A]">Not Hosted on Site</span></div>
                 </div>
