@@ -289,17 +289,17 @@ export default function HomePage() {
                 <span className="font-mono text-xs text-[#FF6B35] bg-[#FF6B35]/10 px-2 py-0.5 rounded border border-[#FF6B35]/30">
                   EVENT // ARCHIVE
                 </span>
-                <span className="font-mono text-xs text-[#A5B0AA]">STATUS: COMPLETED</span>
+                <span className="font-mono text-xs text-[#A5B0AA]">STATUS: ARCHIVED</span>
               </div>
               <h3 className="text-2xl font-bold font-['Barlow Condensed'] text-[#F1F3E9] uppercase tracking-wide">
                 DOMination
               </h3>
               <p className="text-xs sm:text-sm text-[#A5B0AA] leading-relaxed">
-                Frontend and DOM manipulation technical event focused on creative web techniques, interactive UI mechanics, and developer problem solving.
+                Verified event title from Code2Chill history. Event archive documentation and retrospective details are currently being compiled.
               </p>
-              <div className="pt-2 flex items-center justify-between text-xs font-mono text-[#A5B0AA]/80 border-t border-[#344044] pt-3">
-                <span>LOCATION: CAMPUS</span>
-                <span className="text-[#45D9E8]">RECORD_VERIFIED</span>
+              <div className="flex items-center justify-between text-xs font-mono text-[#A5B0AA]/80 border-t border-[#344044] pt-3">
+                <span>RECORD: HISTORICAL</span>
+                <span className="text-[#45D9E8]">VERIFIED_TITLE</span>
               </div>
             </div>
 
@@ -309,17 +309,17 @@ export default function HomePage() {
                 <span className="font-mono text-xs text-[#45D9E8] bg-[#45D9E8]/10 px-2 py-0.5 rounded border border-[#45D9E8]/30">
                   EVENT // ARCHIVE
                 </span>
-                <span className="font-mono text-xs text-[#A5B0AA]">STATUS: COMPLETED</span>
+                <span className="font-mono text-xs text-[#A5B0AA]">STATUS: ARCHIVED</span>
               </div>
               <h3 className="text-2xl font-bold font-['Barlow Condensed'] text-[#F1F3E9] uppercase tracking-wide">
                 Byte The Vibe
               </h3>
               <p className="text-xs sm:text-sm text-[#A5B0AA] leading-relaxed">
-                Club gathering and community session uniting developer energy, creative coding culture, and collaborative project sharing among peers.
+                Verified event title from Code2Chill history. Event archive documentation and retrospective details are currently being compiled.
               </p>
-              <div className="pt-2 flex items-center justify-between text-xs font-mono text-[#A5B0AA]/80 border-t border-[#344044] pt-3">
-                <span>LOCATION: CAMPUS</span>
-                <span className="text-[#B8F34A]">RECORD_VERIFIED</span>
+              <div className="flex items-center justify-between text-xs font-mono text-[#A5B0AA]/80 border-t border-[#344044] pt-3">
+                <span>RECORD: HISTORICAL</span>
+                <span className="text-[#B8F34A]">VERIFIED_TITLE</span>
               </div>
             </div>
           </div>
@@ -352,20 +352,19 @@ export default function HomePage() {
             <div className="rounded-lg border border-[#344044] bg-[#111619] p-6 space-y-4 hover:border-[#45D9E8] transition-colors">
               <div className="flex items-center justify-between border-b border-[#344044] pb-3">
                 <span className="font-mono text-xs text-[#45D9E8] bg-[#45D9E8]/10 px-2 py-0.5 rounded border border-[#45D9E8]/30">
-                  PROJECT // AI_VISION
+                  PROJECT // STUDENT_WORK
                 </span>
-                <span className="font-mono text-xs text-[#B8F34A]">VERIFIED</span>
+                <span className="font-mono text-xs text-[#B8F34A]">VERIFIED_TITLE</span>
               </div>
               <h3 className="text-2xl font-bold font-['Barlow Condensed'] text-[#F1F3E9] uppercase tracking-wide">
                 NEXUS — Emotion Detection
               </h3>
               <p className="text-xs sm:text-sm text-[#A5B0AA] leading-relaxed">
-                Student-developed software project exploring real-time emotion recognition, visual classification pipelines, and responsive feedback models.
+                Verified student project title from Code2Chill records. Technical specifications, architecture details, and repository documentation are currently being compiled.
               </p>
-              <div className="pt-2 flex flex-wrap gap-2 text-[10px] font-mono">
-                <span className="px-2 py-0.5 rounded bg-[#1A2224] text-[#A5B0AA] border border-[#344044]">Computer Vision</span>
-                <span className="px-2 py-0.5 rounded bg-[#1A2224] text-[#A5B0AA] border border-[#344044]">Neural Inference</span>
-                <span className="px-2 py-0.5 rounded bg-[#1A2224] text-[#A5B0AA] border border-[#344044]">Python</span>
+              <div className="flex items-center justify-between text-xs font-mono text-[#A5B0AA]/80 border-t border-[#344044] pt-3">
+                <span>STATUS: DOCUMENTING</span>
+                <span className="text-[#45D9E8]">EXPLORE_MORE →</span>
               </div>
             </div>
 
@@ -373,20 +372,19 @@ export default function HomePage() {
             <div className="rounded-lg border border-[#344044] bg-[#111619] p-6 space-y-4 hover:border-[#FF6B35] transition-colors">
               <div className="flex items-center justify-between border-b border-[#344044] pb-3">
                 <span className="font-mono text-xs text-[#FF6B35] bg-[#FF6B35]/10 px-2 py-0.5 rounded border border-[#FF6B35]/30">
-                  PROJECT // WEB_SPATIAL
+                  PROJECT // STUDENT_WORK
                 </span>
-                <span className="font-mono text-xs text-[#B8F34A]">VERIFIED</span>
+                <span className="font-mono text-xs text-[#B8F34A]">VERIFIED_TITLE</span>
               </div>
               <h3 className="text-2xl font-bold font-['Barlow Condensed'] text-[#F1F3E9] uppercase tracking-wide">
                 ChronoAtlas
               </h3>
               <p className="text-xs sm:text-sm text-[#A5B0AA] leading-relaxed">
-                Interactive spatial and historical mapping application investigating temporal data visualization, geographic coordinate rendering, and dynamic navigation.
+                Verified student project title from Code2Chill records. Technical specifications, architecture details, and repository documentation are currently being compiled.
               </p>
-              <div className="pt-2 flex flex-wrap gap-2 text-[10px] font-mono">
-                <span className="px-2 py-0.5 rounded bg-[#1A2224] text-[#A5B0AA] border border-[#344044]">Spatial UI</span>
-                <span className="px-2 py-0.5 rounded bg-[#1A2224] text-[#A5B0AA] border border-[#344044]">Data Visualization</span>
-                <span className="px-2 py-0.5 rounded bg-[#1A2224] text-[#A5B0AA] border border-[#344044]">Full-Stack</span>
+              <div className="flex items-center justify-between text-xs font-mono text-[#A5B0AA]/80 border-t border-[#344044] pt-3">
+                <span>STATUS: DOCUMENTING</span>
+                <span className="text-[#FF6B35]">EXPLORE_MORE →</span>
               </div>
             </div>
           </div>
@@ -419,30 +417,26 @@ export default function HomePage() {
                 <p className="text-sm sm:text-base text-[#A5B0AA] leading-relaxed">
                   Code2Chill thrives because of active collaboration across disciplines. Our members contribute across software engineering, hardware prototyping, editorial content, and community operations under the mentorship of the Office of Student Life.
                 </p>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs font-mono pt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-mono pt-2">
                   <div className="p-2.5 rounded bg-[#1A2224] border border-[#344044]">
                     <div className="text-[#FF6B35] font-semibold">EXECUTIVE</div>
-                    <div className="text-[11px] text-[#A5B0AA]">Leadership & Vision</div>
+                    <div className="text-[11px] text-[#A5B0AA]">Leadership & Strategy</div>
                   </div>
                   <div className="p-2.5 rounded bg-[#1A2224] border border-[#344044]">
                     <div className="text-[#45D9E8] font-semibold">TECHNICAL</div>
-                    <div className="text-[11px] text-[#A5B0AA]">Architecture & Code</div>
+                    <div className="text-[11px] text-[#A5B0AA]">Architecture & Development</div>
                   </div>
                   <div className="p-2.5 rounded bg-[#1A2224] border border-[#344044]">
-                    <div className="text-[#B8F34A] font-semibold">EDITORIAL</div>
-                    <div className="text-[11px] text-[#A5B0AA]">Content & Docs</div>
+                    <div className="text-[#B8F34A] font-semibold">CONTENT</div>
+                    <div className="text-[11px] text-[#A5B0AA]">Editorial & Documentation</div>
                   </div>
                   <div className="p-2.5 rounded bg-[#1A2224] border border-[#344044]">
-                    <div className="text-[#45D9E8] font-semibold">MEDIA</div>
-                    <div className="text-[11px] text-[#A5B0AA]">Branding & Visuals</div>
+                    <div className="text-[#FF6B35] font-semibold">MEDIA & OUTREACH</div>
+                    <div className="text-[11px] text-[#A5B0AA]">Branding & Public Relations</div>
                   </div>
-                  <div className="p-2.5 rounded bg-[#1A2224] border border-[#344044]">
-                    <div className="text-[#FF6B35] font-semibold">PR & OUTREACH</div>
-                    <div className="text-[11px] text-[#A5B0AA]">Campus Relations</div>
-                  </div>
-                  <div className="p-2.5 rounded bg-[#1A2224] border border-[#344044]">
-                    <div className="text-[#B8F34A] font-semibold">OPERATIONS</div>
-                    <div className="text-[11px] text-[#A5B0AA]">Execution & Sprints</div>
+                  <div className="p-2.5 rounded bg-[#1A2224] border border-[#344044] sm:col-span-2 lg:col-span-2">
+                    <div className="text-[#45D9E8] font-semibold">CORE</div>
+                    <div className="text-[11px] text-[#A5B0AA]">Operations & Technical Execution</div>
                   </div>
                 </div>
               </div>
