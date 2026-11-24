@@ -51,38 +51,64 @@ export default function StatusPage() {
       }
       setRawPayload(payload);
 
+      // Condition 1: HTTP 200 + expected payload {"status": "ok"}
       if (response.status === 200 && payload && payload.status === 'ok') {
         setHealthData({
+          condition: 'HEALTHY',
           overall: 'OPERATIONAL',
-          apiStatus: 'HEALTHY',
-          dbStatus: 'HEALTHY',
-          message: 'All monitored backend components are responding normally.',
+          apiStatus: 'OPERATIONAL',
+          dbStatus: 'OPERATIONAL',
+          apiLabel: 'OPERATIONAL',
+          dbLabel: 'OPERATIONAL',
+          dbDiagnostic: 'SELECT 1 SUCCESS',
+          apiDiagnostic: 'HTTP 200 OK',
+          message: 'FastAPI application is reachable and database ping query succeeded.',
         });
-      } else if (response.status === 503) {
+      }
+      // Condition 2: HTTP 503 + expected payload {"detail": "Database unavailable"}
+      else if (response.status === 503) {
         setHealthData({
+          condition: 'DEGRADED',
           overall: 'DEGRADED',
-          apiStatus: 'HEALTHY',
+          apiStatus: 'REACHABLE_WITH_ERROR',
           dbStatus: 'UNAVAILABLE',
-          message: payload?.detail || 'Database connectivity unavailable.',
+          apiLabel: 'REACHABLE (HTTP 503)',
+          dbLabel: 'UNAVAILABLE',
+          dbDiagnostic: 'CONNECTION FAILED',
+          apiDiagnostic: 'HTTP 503 SERVICE UNAVAILABLE',
+          message: 'API process is reachable, but database connectivity query failed.',
         });
-      } else {
+      }
+      // Condition 4: Unexpected HTTP status or payload format
+      else {
         setHealthData({
-          overall: 'DEGRADED',
-          apiStatus: 'UNEXPECTED_STATUS',
+          condition: 'UNKNOWN',
+          overall: 'UNKNOWN',
+          apiStatus: 'UNEXPECTED_RESPONSE',
           dbStatus: 'UNKNOWN',
-          message: `Endpoint returned unexpected HTTP ${response.status}.`,
+          apiLabel: 'UNEXPECTED RESPONSE',
+          dbLabel: 'STATUS UNKNOWN',
+          dbDiagnostic: 'NOT EVALUATED (INVALID PAYLOAD)',
+          apiDiagnostic: `HTTP ${response.status}`,
+          message: `Endpoint returned unexpected HTTP ${response.status} or unrecognized payload.`,
         });
       }
     } catch (err) {
+      // Condition 3: Network failure (backend unreachable)
       const elapsed = Math.round(performance.now() - startTime);
       setLatencyMs(elapsed);
       setHttpStatus(null);
       setRawPayload(null);
       setErrorDetails(err.message || 'Failed to connect to backend service.');
       setHealthData({
+        condition: 'NETWORK_FAILURE',
         overall: 'UNAVAILABLE',
         apiStatus: 'UNREACHABLE',
         dbStatus: 'UNKNOWN',
+        apiLabel: 'UNREACHABLE',
+        dbLabel: 'STATUS UNKNOWN',
+        dbDiagnostic: 'NOT EVALUATED (GATEWAY DOWN)',
+        apiDiagnostic: 'CONNECTION REFUSED',
         message: 'Could not establish connection to the backend health endpoint.',
       });
     } finally {
@@ -127,6 +153,16 @@ export default function StatusPage() {
         bannerBg: 'border-[#FF6B35]/40 bg-[#FF6B35]/5',
       };
     }
+    if (healthData?.overall === 'UNKNOWN') {
+      return {
+        text: 'HEALTH STATUS UNKNOWN',
+        color: 'text-[#FF6B35]',
+        borderColor: 'border-[#FF6B35]/40',
+        bg: 'bg-[#FF6B35]/10',
+        pulse: 'bg-[#FF6B35]',
+        bannerBg: 'border-[#FF6B35]/40 bg-[#FF6B35]/5',
+      };
+    }
     return {
       text: 'BACKEND UNAVAILABLE',
       color: 'text-[#FF6B35]',
@@ -164,7 +200,7 @@ export default function StatusPage() {
                   System Status <span className="text-[#FF6B35]">& Availability</span>.
                 </h1>
                 <p className="text-base sm:text-lg text-[#F1F3E9]/90 max-w-2xl leading-relaxed">
-                  Real-time telemetry and service health indicators for the Code2Chill backend services and database connection.
+                  Real-time availability and diagnostic telemetry for the Code2Chill backend services and database connection.
                 </p>
                 <p className="text-sm text-[#A5B0AA] max-w-2xl leading-relaxed">
                   Status data on this page reflects genuine health evaluations executed directly against our FastAPI backend and PostgreSQL database ping query.
@@ -193,7 +229,11 @@ export default function StatusPage() {
                     <line x1="10" y1="100" x2="210" y2="100" stroke="#344044" strokeWidth="0.5" strokeDasharray="2 2" />
 
                     {/* Connection Traces */}
-                    <path d="M45 60 L110 60 L175 60" stroke={healthData?.overall === 'OPERATIONAL' ? '#B8F34A' : '#344044'} strokeWidth="1.5" />
+                    <path
+                      d="M45 60 L110 60 L175 60"
+                      stroke={healthData?.overall === 'OPERATIONAL' ? '#B8F34A' : '#344044'}
+                      strokeWidth="1.5"
+                    />
 
                     {/* Node 1: Client/Frontend */}
                     <rect x="15" y="45" width="45" height="30" rx="3" fill="#111619" stroke="#45D9E8" strokeWidth="1.5" />
@@ -207,13 +247,25 @@ export default function StatusPage() {
                       height="40"
                       rx="3"
                       fill="#111619"
-                      stroke={healthData?.apiStatus === 'HEALTHY' ? '#B8F34A' : '#FF6B35'}
+                      stroke={
+                        healthData?.apiStatus === 'OPERATIONAL'
+                          ? '#B8F34A'
+                          : healthData?.apiStatus === 'REACHABLE_WITH_ERROR'
+                          ? '#FF6B35'
+                          : '#FF6B35'
+                      }
                       strokeWidth="1.5"
                     />
                     <text
                       x="110"
                       y="63"
-                      fill={healthData?.apiStatus === 'HEALTHY' ? '#B8F34A' : '#FF6B35'}
+                      fill={
+                        healthData?.apiStatus === 'OPERATIONAL'
+                          ? '#B8F34A'
+                          : healthData?.apiStatus === 'REACHABLE_WITH_ERROR'
+                          ? '#FF6B35'
+                          : '#FF6B35'
+                      }
                       fontSize="7"
                       fontFamily="monospace"
                       textAnchor="middle"
@@ -230,13 +282,25 @@ export default function StatusPage() {
                       height="30"
                       rx="3"
                       fill="#111619"
-                      stroke={healthData?.dbStatus === 'HEALTHY' ? '#B8F34A' : '#FF6B35'}
+                      stroke={
+                        healthData?.dbStatus === 'OPERATIONAL'
+                          ? '#B8F34A'
+                          : healthData?.dbStatus === 'UNAVAILABLE'
+                          ? '#FF6B35'
+                          : '#344044'
+                      }
                       strokeWidth="1.5"
                     />
                     <text
                       x="182"
                       y="63"
-                      fill={healthData?.dbStatus === 'HEALTHY' ? '#B8F34A' : '#FF6B35'}
+                      fill={
+                        healthData?.dbStatus === 'OPERATIONAL'
+                          ? '#B8F34A'
+                          : healthData?.dbStatus === 'UNAVAILABLE'
+                          ? '#FF6B35'
+                          : '#A5B0AA'
+                      }
                       fontSize="7"
                       fontFamily="monospace"
                       textAnchor="middle"
@@ -247,7 +311,12 @@ export default function StatusPage() {
 
                     {/* Dynamic Status Indicator Dots */}
                     <circle cx="65" cy="60" r="2.5" fill="#45D9E8" />
-                    <circle cx="155" cy="60" r="2.5" fill={healthData?.overall === 'OPERATIONAL' ? '#B8F34A' : '#FF6B35'} />
+                    <circle
+                      cx="155"
+                      cy="60"
+                      r="2.5"
+                      fill={healthData?.overall === 'OPERATIONAL' ? '#B8F34A' : '#FF6B35'}
+                    />
                   </svg>
 
                   <div className="pt-2 border-t border-[#344044] flex justify-between text-[11px] font-mono text-[#A5B0AA]">
@@ -325,12 +394,14 @@ export default function StatusPage() {
                     </span>
                     <span
                       className={`font-mono text-xs px-2 py-0.5 rounded border ${
-                        healthData?.apiStatus === 'HEALTHY'
+                        healthData?.apiStatus === 'OPERATIONAL'
                           ? 'bg-[#B8F34A]/10 text-[#B8F34A] border-[#B8F34A]/30'
+                          : healthData?.apiStatus === 'REACHABLE_WITH_ERROR'
+                          ? 'bg-[#FF6B35]/10 text-[#FF6B35] border-[#FF6B35]/30'
                           : 'bg-[#FF6B35]/10 text-[#FF6B35] border-[#FF6B35]/30'
                       }`}
                     >
-                      {isLoading ? 'CHECKING...' : healthData?.apiStatus || 'UNKNOWN'}
+                      {isLoading ? 'CHECKING...' : healthData?.apiLabel || 'UNKNOWN'}
                     </span>
                   </div>
 
@@ -345,7 +416,7 @@ export default function StatusPage() {
 
                 <div className="pt-3 border-t border-[#344044]/60 flex items-center justify-between text-xs font-mono text-[#A5B0AA]/80">
                   <span>CHECK: HTTP GET /api/health</span>
-                  <span className="text-[#F1F3E9]">{httpStatus ? `HTTP ${httpStatus}` : 'NO_RESPONSE'}</span>
+                  <span className="text-[#F1F3E9]">{healthData?.apiDiagnostic || 'NO_RESPONSE'}</span>
                 </div>
               </div>
 
@@ -358,14 +429,14 @@ export default function StatusPage() {
                     </span>
                     <span
                       className={`font-mono text-xs px-2 py-0.5 rounded border ${
-                        healthData?.dbStatus === 'HEALTHY'
+                        healthData?.dbStatus === 'OPERATIONAL'
                           ? 'bg-[#B8F34A]/10 text-[#B8F34A] border-[#B8F34A]/30'
                           : healthData?.dbStatus === 'UNAVAILABLE'
                           ? 'bg-[#FF6B35]/10 text-[#FF6B35] border-[#FF6B35]/30'
                           : 'bg-[#A5B0AA]/10 text-[#A5B0AA] border-[#A5B0AA]/30'
                       }`}
                     >
-                      {isLoading ? 'CHECKING...' : healthData?.dbStatus || 'UNKNOWN'}
+                      {isLoading ? 'CHECKING...' : healthData?.dbLabel || 'UNKNOWN'}
                     </span>
                   </div>
 
@@ -381,11 +452,7 @@ export default function StatusPage() {
                 <div className="pt-3 border-t border-[#344044]/60 flex items-center justify-between text-xs font-mono text-[#A5B0AA]/80">
                   <span>DIAGNOSTIC: DB_PING</span>
                   <span className="text-[#F1F3E9]">
-                    {healthData?.dbStatus === 'HEALTHY'
-                      ? 'SELECT 1 SUCCESS'
-                      : healthData?.dbStatus === 'UNAVAILABLE'
-                      ? 'CONNECTION FAILED'
-                      : 'NOT EVALUATED'}
+                    {healthData?.dbDiagnostic || 'NOT EVALUATED'}
                   </span>
                 </div>
               </div>
@@ -455,7 +522,7 @@ export default function StatusPage() {
                     Health checks run directly from your browser to the configured FastAPI health route.
                   </p>
                   <p>
-                    A 200 response confirms both process availability and successful database ping execution.
+                    HTTP 200 confirms both process availability and database query execution. HTTP 503 confirms the API is reachable but database connectivity failed.
                   </p>
                 </div>
               </div>
